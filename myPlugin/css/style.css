@@ -1,0 +1,94 @@
+/* General form styling */
+#written-work-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Form inputs */
+#written-work-form input[type="text"],
+#written-work-form input[type="number"],
+#written-work-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+/* Textarea */
+#written-work-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Labels */
+#written-work-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Submit button */
+#written-work-form input[type="submit"] {
+    display: inline-block;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#written-work-form input[type="submit"]:hover {
+    background-color: #005d8f;
+}
+
+/* Form message styling */
+#form-message {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#form-message p {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+#form-message p.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+/* Style for the categories and tags checkboxes */
+#categories, #tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adds spacing between checkboxes */
+}
+
+#categories div, #tags div {
+    display: flex;
+    align-items: center;
+}
+
+#categories input[type="checkbox"], #tags input[type="checkbox"] {
+    margin-right: 5px; /* Adds space between checkbox and label */
+}
