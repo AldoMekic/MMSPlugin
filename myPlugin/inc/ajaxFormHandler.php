@@ -30,7 +30,7 @@ function handle_written_work_submission() {
     $post_id = wp_insert_post([
         'post_title' => $title,
         'post_content' => $content,
-        'post_status' => 'publish',
+        'post_status' => 'draft',
         'post_type' => 'written_work',
     ]);
 

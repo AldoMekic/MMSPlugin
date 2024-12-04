@@ -1,0 +1,71 @@
+.ww-slider {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.ww-card {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ww-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.ww-date,
+.ww-author {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.ww-link {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0073aa;
+    font-weight: bold;
+}
+
+.ww-link:hover {
+    text-decoration: underline;
+    color: #005177;
+}
+
+.ww-slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.ww-slider-btn {
+    padding: 10px 15px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.ww-slider-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.ww-slider-btn:hover:not(:disabled) {
+    background-color: #005177;
+}

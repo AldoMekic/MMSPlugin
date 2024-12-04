@@ -12,6 +12,7 @@
 
 require_once plugin_dir_path(__FILE__) . 'inc/shortcodeForm.php';
 require_once plugin_dir_path(__FILE__) . 'inc/ajaxFormHandler.php';
+require_once plugin_dir_path(__FILE__) . 'inc/slider-shortcode.php';
 
 function add_myplugin_styles_scripts() {
     $plugin_url = plugin_dir_url(__FILE__);
@@ -22,6 +23,17 @@ function add_myplugin_styles_scripts() {
     wp_localize_script('myplugin_form_handler', 'ajaxurl', admin_url('admin-ajax.php'));
 }
 add_action('wp_enqueue_scripts', 'add_myplugin_styles_scripts');
+
+
+
+function ww_slider_enqueue_scripts() {
+    $plugin_url = plugin_dir_url(__FILE__);
+
+    wp_enqueue_style('ww_slider_styles', $plugin_url . 'css/slider.css');
+    wp_enqueue_script('ww_slider_script', $plugin_url . 'js/slider.js', ['jquery'], '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'ww_slider_enqueue_scripts');
+
 ?>
 
 
