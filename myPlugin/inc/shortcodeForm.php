@@ -13,7 +13,7 @@
 
     ob_start(); ?>
     
-    <form id="written-work-form">
+    <form id="written-work-form-plugin">
         <?php wp_nonce_field('myplugin_nonce_action', 'myplugin_nonce'); ?>
 
         <label for="title">Title:</label>
@@ -22,8 +22,8 @@
         <label for="content">Content:</label>
         <textarea id="content" name="content" required></textarea>
         
-        <label for="categories">Categories:</label>
-        <div id="categories">
+        <label for="categories-plugin">Categories:</label>
+        <div id="categories-plugin">
             <?php if (!empty($categories) && !is_wp_error($categories)) : ?>
                 <?php foreach ($categories as $category) : ?>
                     <div>
@@ -36,8 +36,8 @@
             <?php endif; ?>
         </div>
         
-        <label for="tags">Tags:</label>
-        <div id="tags">
+        <label for="tags-plugin">Tags:</label>
+        <div id="tags-plugin">
             <?php if (!empty($tags) && !is_wp_error($tags)) : ?>
                 <?php foreach ($tags as $tag) : ?>
                     <div>
