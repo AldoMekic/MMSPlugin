@@ -1,5 +1,5 @@
 /* General form styling */
-#written-work-form {
+#written-work-form-plugin {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -8,13 +8,17 @@
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center all child elements horizontally */
 }
 
 /* Form inputs */
-#written-work-form input[type="text"],
-#written-work-form input[type="number"],
-#written-work-form textarea {
-    width: 100%;
+#written-work-form-plugin input[type="text"],
+#written-work-form-plugin input[type="number"],
+#written-work-form-plugin textarea {
+    width: 100%; /* Full width within the container */
+    max-width: 500px; /* Optional: Restrict width to make it more centered */
     padding: 10px;
     margin: 10px 0 20px 0;
     border: 1px solid #ccc;
@@ -24,13 +28,13 @@
 }
 
 /* Textarea */
-#written-work-form textarea {
+#written-work-form-plugin textarea {
     min-height: 100px;
     resize: vertical;
 }
 
 /* Labels */
-#written-work-form label {
+#written-work-form-plugin label {
     display: block;
     font-size: 14px;
     font-weight: bold;
@@ -39,7 +43,7 @@
 }
 
 /* Submit button */
-#written-work-form input[type="submit"] {
+#written-work-form-plugin input[type="submit"] {
     display: inline-block;
     background-color: #0073aa;
     color: #fff;
@@ -50,20 +54,22 @@
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s;
+    width: 100%; /* Make the submit button take full width */
+    max-width: 500px; /* Optional: Restrict button width */
 }
 
-#written-work-form input[type="submit"]:hover {
+#written-work-form-plugin input[type="submit"]:hover {
     background-color: #005d8f;
 }
 
 /* Form message styling */
-#form-message {
+#form-message-plugin {
     margin-top: 20px;
     font-size: 14px;
     font-weight: bold;
 }
 
-#form-message p {
+#form-message-plugin p {
     padding: 10px;
     border-radius: 4px;
     background-color: #dff0d8;
@@ -71,24 +77,25 @@
     border: 1px solid #d6e9c6;
 }
 
-#form-message p.error {
+#form-message-plugin p.error {
     background-color: #f2dede;
     color: #a94442;
     border: 1px solid #ebccd1;
 }
 
 /* Style for the categories and tags checkboxes */
-#categories, #tags {
+#categories-plugin, #tags-plugin {
     display: flex;
     flex-wrap: wrap;
     gap: 10px; /* Adds spacing between checkboxes */
+    justify-content: center; /* Centers the checkboxes horizontally */
 }
 
-#categories div, #tags div {
+#categories-plugin div, #tags-plugin div {
     display: flex;
     align-items: center;
 }
 
-#categories input[type="checkbox"], #tags input[type="checkbox"] {
+#categories-plugin input[type="checkbox"], #tags-plugin input[type="checkbox"] {
     margin-right: 5px; /* Adds space between checkbox and label */
 }

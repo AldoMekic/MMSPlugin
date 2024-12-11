@@ -69,3 +69,27 @@
 .ww-slider-btn:hover:not(:disabled) {
     background-color: #005177;
 }
+
+/* Make the entire card clickable */
+.ww-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Card hover effect for better UX */
+.ww-card-link:hover .ww-card {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.ww-slider-title {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}

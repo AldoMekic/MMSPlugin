@@ -10,7 +10,16 @@ function ww_slider_shortcode($atts) {
         'post_status' => 'publish',
     ];
 
+    // Default category name is empty
+    $category_name = '';
+
     if (!empty($atts['category'])) {
+        // Retrieve the category by its slug
+        $category = get_term_by('slug', $atts['category'], 'written_work_category');
+        if ($category) {
+            $category_name = $category->name; // Get category name
+        }
+
         $args['tax_query'] = [
             [
                 'taxonomy' => 'written_work_category',
@@ -38,10 +47,15 @@ function ww_slider_shortcode($atts) {
     }
     wp_reset_postdata();
 
-    $slider_id = 'ww-slider-' . uniqid(); // Generate a unique ID for each slider
+    // Generate a unique ID for each slider
+    $slider_id = 'ww-slider-' . uniqid();
 
     ob_start(); ?>
     <div id="<?php echo esc_attr($slider_id); ?>" class="ww-slider-container" data-works='<?php echo wp_json_encode($written_works); ?>'>
+        <!-- Display the category title above the slider -->
+        <?php if ($category_name): ?>
+            <h2 class="ww-slider-title"><?php echo esc_html($category_name); ?></h2>
+        <?php endif; ?>
         <div class="ww-slider">
             <!-- Cards will be dynamically inserted here -->
         </div>

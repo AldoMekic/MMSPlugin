@@ -16,12 +16,13 @@ function wwInitializeSlider(sliderId) {
         for (let i = startIndex; i < endIndex; i++) {
             const work = works[i];
             const card = `
-                <div class="ww-card">
-                    <h3 class="ww-title">${work.title}</h3>
-                    <p class="ww-date">${work.date}</p>
-                    <p class="ww-author">By: ${work.author}</p>
-                    <a href="${work.link}" class="ww-link">Read More</a>
-                </div>
+                <a href="${work.link}" class="ww-card-link">
+                    <div class="ww-card">
+                        <h3 class="ww-title">${work.title}</h3>
+                        <p class="ww-date">${work.date}</p>
+                        <p class="ww-author">By: ${work.author}</p>
+                    </div>
+                </a>
             `;
             slider.append(card);
         }
